@@ -13,38 +13,74 @@
 		<link rel="stylesheet" href="./css/bloom-tools.css">
 	</head>
 <body>
-	<h5>Pikmin Type</h5>
-	<select name="pikminType" id="pikminType">
-		<option>Red</option>
-		<option>Yellow</option>
-		<option>Blue</option>
-		<option>Purple</option>
-		<option>White</option>
-		<option>Winged</option>
-		<option>Rock</option>
-	</select>
-	<select name="bloomBonus" id="bloomBonus">
-			<option>Nothing</option>
-			<option>Leaf</option>
-			<option>Bud</option>
-			<option>Regular flower</option>
-			<option>Rare flower</option>
-	</select>
-	<h5>Mushroom Type</h5>
-	<select name="mushroomType" id="mushroomType">
-			<option>Red</option>
-			<option>Yellow</option>
-			<option>Blue</option>
-			<option>Purple</option>
-			<option>White</option>
-			<option>Pink</option>
-			<option>Gray</option>
-			<option>Fire</option>
-			<option>Water</option>
-			<option>Crystal</option>
-	</select>
-	<h5>Squad Size</h5>
-	<input name="squadSize" id="squadSize" value="1">
+	<h1>Mushroom Calculator</h1>
+	<table id="mushcalc">
+		<tr>
+			<th>Pikmin Type</th>
+			<th>Bloom Bonus</th>
+			<th>Decor</th>
+			<th>Friendship</th>
+			<th>Mushroom Type</th>
+			<th>Squad Size</th>
+		</tr>
+		<tr>
+			<th>
+				<select name="pikminType" id="pikminType">
+					<option>Red</option>
+					<option>Yellow</option>
+					<option>Blue</option>
+					<option>Purple</option>
+					<option>White</option>
+					<option>Winged</option>
+					<option>Rock</option>
+				</select>
+			</th>
+			<th>
+				<select name="bloomBonus" id="bloomBonus">
+					<option>Nothing</option>
+					<option>Leaf</option>
+					<option>Bud</option>
+					<option>Regular flower</option>
+					<option>Rare flower</option>
+				</select>
+			</th>
+			<th>
+				<select name="decorBonus" id="decorBonus">
+					<option>No</option>
+					<option>Yes</option>
+				</select>
+			</th>
+			<th>
+					<select name="friendshipBonus" id="friendshipBonus">
+						<option>0 Heart</option>
+						<option>1 Heart</option>
+						<option>2 Hearts</option>
+						<option>3 Hearts</option>
+						<option>4 Hearts</option>
+						<option>1 Golden Heart</option>
+						<option>2 Golden Hearts</option>
+						<option>3 Golden Hearts</option>
+						<option>4 Golden Hearts</option>
+					</select>
+				</th>
+			<th>
+				<select name="mushroomType" id="mushroomType">
+					<option>Red</option>
+					<option>Yellow</option>
+					<option>Blue</option>
+					<option>Purple</option>
+					<option>White</option>
+					<option>Pink</option>
+					<option>Gray</option>
+					<option>Fire</option>
+					<option>Water</option>
+					<option>Crystal</option>
+				</select>
+			</th>
+			<th><input name="squadSize" id="squadSize" value="1"></th>
+		</tr>
+	</table>
+	<h3>Individual Pikmin Strength: <span =class="individual">-</span></h3>
 	<h3>Squad Strength: <span class="squad">-</span></h3>
 </body>
 <script src="./dist/bloom-tools.js"></script>

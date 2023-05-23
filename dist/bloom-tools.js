@@ -33,8 +33,7 @@ $(document).ready(function()
 	//let bloomBonus = [0, 1, 2, 3, 4]; //Index == value!
 
 	let decorBonus = 4;
-	let friendshipBonus = 1;
-	let goldenHeartBonus = 4;
+	let friendshipBonuses = [0, 1, 2, 3, 4, 8, 12, 16, 20];
 
 	/*
 		Values taken from the Attack Power Infographic v2
@@ -51,13 +50,18 @@ $(document).ready(function()
 		[3, 3, 0, 3, 0, 3, 12, 0, 0, 100],
 	];
 
-	function getSquadStrength()
+	function getStrength()
 	{
-		let pikminStrength = squadStrength = 0;
+		let individualStrength = squadStrength = 0;
 		
 		let pikminType = $('#pikminType')[0].selectedIndex;
 		let bloomBonus = $('#bloomBonus')[0].selectedIndex;
 		let mushroomType = $('#mushroomType')[0].selectedIndex;
+		let decorBonus = $('#decorBonus')[0].selectedIndex;
+			if(decorBonus == 1)
+				decorBonus = 4;
+
+		let friendshipBonus = friendshipBonuses[$('#friendshipBonus')[0].selectedIndex];
 		let squadSize = $('#squadSize').val();
 
 		//Special mushroom?
@@ -90,15 +94,16 @@ $(document).ready(function()
 		}
 
 		//Calculate squad strength
-		pikminStrength = attackPower[pikminType] + bloomBonus + mushroomMatchup[pikminType][mushroomType];
-		squadStrength = pikminStrength * squadSize;
+		individualStrength = attackPower[pikminType] + bloomBonus + friendshipBonus + decorBonus + mushroomMatchup[pikminType][mushroomType];
+		squadStrength = individualStrength * squadSize;
+		$('.individual').html(individualStrength);
 		$('.squad').html(squadStrength);
 	}
 
 
-	$('#pikminType, #bloomBonus, #mushroomType, #squadSize').on('change', function()
+	$('#mushcalc select, #squadSize').on('change', function()
 	{
-		getSquadStrength();
+		getStrength();
 	});
 
 });
