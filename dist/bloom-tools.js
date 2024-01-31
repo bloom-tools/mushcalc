@@ -85,11 +85,11 @@ $(document).ready(function()
 		}
 
 		//Squad size must be comprised between 1 and 40
-		if(squadSize < 1 || squadSize > 40)
-		{
-			squadSize = 1;
-			$('#squadSize').val(squadSize);
-		}
+		// if(squadSize < 1 || squadSize > 40)
+		// {
+		// 	squadSize = 1;
+		// 	$('#squadSize').val(squadSize);
+		// }
 
 		//Calculate squad strength
 		individualStrength = attackPower[pikminType] + bloomBonus + friendshipBonus + decorBonus + mushroomMatchup[pikminType][mushroomType];
