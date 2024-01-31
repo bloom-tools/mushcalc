@@ -1,3 +1,6 @@
+// Made by Mhyre © 2024
+// Feel free to copy/edit this in any way you see fit for your own uses.
+
 $(document).ready(function()
 {
 	/*
