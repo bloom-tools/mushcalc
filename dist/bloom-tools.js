@@ -76,10 +76,14 @@ $(document).ready(function()
 				} else if(mushroomType == 8) //Water?
 				{
 					pikminType = 2; //Blue
-				} else //Crystal
+				} else if(mushroomType == 9) //Crystal
 				{
 					pikminType = 6; //Rock
+				} else //Electric
+				{
+					pikminType = 1; //Yellow
 				}
+
 
 				$('#pikminType').prop('selectedIndex', pikminType);
 			}
