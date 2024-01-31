@@ -2,7 +2,7 @@ $(document).ready(function()
 {
 	/*
 	Pikmin order is: Red, Yellow, Blue, Purple, White, Pink, Gray.
-	Mushroom order is same as pikmin order, followed by Fire, Water and Crystal.
+	Mushroom order is same as pikmin order, followed by Fire, Water, Crystal and Electric.
 	*/
 
 	let mushroomHealths = [
@@ -15,7 +15,8 @@ $(document).ready(function()
 		[90700, 695500, 3024000], //Gray
 		[0, 3850200, 13662000], //Fire
 		[0, 3816700, 13543200], //Water
-		[0, 3883600, 13780800] //Crystal
+		[0, 3883600, 13780800], //Crystal
+		[0, 3816700, 13543200] //Electric
 	];
 
 	// PIKMINS
@@ -25,13 +26,14 @@ $(document).ready(function()
 	let friendshipBonuses = [0, 1, 2, 3, 4, 8, 12, 16, 20];
 
 	let mushroomMatchup = [
-		[12, 3, 0, 3, 0, 3, 0, 100, 0, 0],
-		[3, 12, 0, 3, 0, 3, 3, 0, 0, 0],
-		[0, 3, 12, 3, 0, 3, 3, 0, 100, 0],
-		[3, 3, 0, 12, 0, 3, 3, 0, 0, 0],
-		[3, 3, 0, 3, 12, 3, 0, 0, 0, 0],
-		[3, 3, 3, 3, 0, 12, 0, 0, 0, 0],
-		[3, 3, 0, 3, 0, 3, 12, 0, 0, 100],
+		[12, 3, 0, 3, 0, 3, 0, 100, 0, 0, 0],
+		[3, 12, 0, 3, 0, 3, 3, 0, 0, 0, 0],
+		[0, 3, 12, 3, 0, 3, 3, 0, 100, 0, 0],
+		[3, 3, 0, 12, 0, 3, 3, 0, 0, 0, 0],
+		[3, 3, 0, 3, 12, 3, 0, 0, 0, 0, 0],
+		[3, 3, 3, 3, 0, 12, 0, 0, 0, 0, 0],
+		[3, 3, 0, 3, 0, 3, 12, 0, 0, 100, 0],
+		[3, 3, 0, 3, 0, 3, 12, 0, 0, 0, 100],
 	];
 
 	function secondsToHMS(s)
